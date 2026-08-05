@@ -68,6 +68,7 @@ jobs:
           PHP_BASE_URL: http://14.139.187.229:8081/oct/renal/
           MODEL_API_URL: http://localhost:5000/predict
         run: |
+          echo "PORT=4000" > backend/.env
           npm run start:backend &
 
       # Stage 9: Start Local Dev Server for Selenium E2E runs
