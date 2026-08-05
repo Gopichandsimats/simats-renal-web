@@ -1,0 +1,148 @@
+name: Selenium Login and E2E Tests
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-test:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # Stage 1: Checkout Repository
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Stage 2: Setup Java
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      # Stage 3: Setup Python
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Stage 4: Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Stage 5: Install Dependencies
+      - name: Install Project Dependencies
+        run: |
+          npm run install:all
+          python -m pip install --upgrade pip
+          python -m pip install tensorflow numpy pillow flask flask-cors selenium openpyxl
+
+      # Stage 6: Build React Client
+      - name: Build React Client
+        run: |
+          npm run build
+
+      # Stage 7: Start Python AI Model Service
+      - name: Start TFLite Inference Service
+        run: |
+          cd backend
+          python predict.py &
+        async: true
+
+      # Stage 8: Start Node.js Proxy Backend
+      - name: Start Node.js Proxy Backend
+        env:
+          PORT: 4000
+          PHP_BASE_URL: http://14.139.187.229:8081/oct/renal/
+          MODEL_API_URL: http://localhost:5000/predict
+        run: |
+          npm run start:backend &
+        async: true
+
+      # Stage 9: Start Local Dev Server for Selenium E2E runs
+      - name: Start Frontend Server
+        run: |
+          npm run dev:frontend &
+        async: true
+
+      # Stage 10: Wait for Servers Startup
+      - name: Wait for Server Readiness
+        run: |
+          sleep 8
+          curl -I http://localhost:4000/api/health
+
+      # Stage 11: Execute Automation & Compliance Suite
+      - name: Execute E2E & Vulnerability Test Engine
+        env:
+          BASE_URL: http://localhost:5173/
+        run: |
+          python automation/run_all_tests.py
+
+      # Stage 12: Organize Reports for Pages Deployment
+      - name: Structure Reports for GitHub Pages
+        run: |
+          # Create folder structures in the client build directory
+          mkdir -p frontend/dist/reports/latest
+          mkdir -p frontend/dist/reports/history/build-${{ github.run_number }}
+          
+          # Copy execution-report.html and assets to latest report folder
+          cp -r "Test Results/HTML/"* frontend/dist/reports/latest/
+          cp -r "Test Results/Screenshots/" frontend/dist/reports/latest/
+          cp -r "Test Results/Logs/" frontend/dist/reports/latest/
+          cp "Test Results/Summary/summary.md" frontend/dist/reports/latest/
+          
+          # Copy to build-specific history archive folder
+          cp -r "Test Results/HTML/"* frontend/dist/reports/history/build-${{ github.run_number }}/
+          cp -r "Test Results/Screenshots/" frontend/dist/reports/history/build-${{ github.run_number }}/
+
+      # Stage 13: Setup GitHub Pages Configurations
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
+
+      # Stage 14: Upload GitHub Pages Artifact
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'frontend/dist'
+
+      # Stage 15: Deploy Web Portal + Reports to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # Stage 16: Upload Excel and Log Artifacts
+      - name: Upload Test Run Evidence
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: execution-evidence-build-${{ github.run_number }}
+          path: |
+            Test Results/Excel/
+            Test Results/HTML/
+            Test Results/JSON/
+            Test Results/Logs/
+            Test Results/Screenshots/
+            Test Results/Summary/
+          retention-days: 30
+
+      # Stage 17: Publish Execution Summary in Actions log
+      - name: Publish GitHub Action Summary
+        if: always()
+        run: |
+          cat "Test Results/Summary/summary.md" >> $GITHUB_STEP_SUMMARY
