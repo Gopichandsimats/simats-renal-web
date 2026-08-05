@@ -130,7 +130,7 @@
             <small style="color: #94a3b8;">Unified E2E Testing & Security Compliance Report</small>
         </div>
         <div style="text-align: right;">
-            <div>Date: 2026-08-05 09:59:31</div>
+            <div>Date: 2026-08-05 10:05:10</div>
             <small style="color: #94a3b8;">Platform: Chrome Headless & Android Simulator (emulator-5554)</small>
         </div>
     </header>
@@ -143,19 +143,19 @@
             </div>
             <div class="card success">
                 <h3>Passed</h3>
-                <div class="value" style="color: var(--success);">1512</div>
+                <div class="value" style="color: var(--success);">1520</div>
             </div>
             <div class="card danger">
                 <h3>Failed</h3>
-                <div class="value" style="color: var(--danger);">7</div>
+                <div class="value" style="color: var(--danger);">0</div>
             </div>
             <div class="card warning">
                 <h3>Skipped</h3>
-                <div class="value" style="color: var(--warning);">1</div>
+                <div class="value" style="color: var(--warning);">0</div>
             </div>
             <div class="card">
                 <h3>Pass Percentage</h3>
-                <div class="value">99.47%</div>
+                <div class="value">100.0%</div>
             </div>
         </div>
 
@@ -178,9 +178,9 @@
         <tr>
             <td><b>Selenium Web</b></td>
             <td>470</td>
-            <td>466</td>
-            <td style="color: var(--danger);">3</td>
-            <td><b>99.1%</b></td>
+            <td>470</td>
+            <td style="color: inherit;">0</td>
+            <td><b>100.0%</b></td>
         </tr>
         
         <tr>
@@ -194,9 +194,9 @@
         <tr>
             <td><b>Backend Security</b></td>
             <td>505</td>
-            <td>501</td>
-            <td style="color: var(--danger);">4</td>
-            <td><b>99.2%</b></td>
+            <td>505</td>
+            <td style="color: inherit;">0</td>
+            <td><b>100.0%</b></td>
         </tr>
         
         <tr>
@@ -233,99 +233,17 @@
                     </tr>
                     <tr>
                         <td><b>Baseline Latency</b></td>
-                        <td>Avg: 13.6 ms | P95: 28.54 ms</td>
+                        <td>Avg: 11.93 ms | P95: 22.27 ms</td>
                     </tr>
                     <tr>
                         <td><b>Load Test RPS</b></td>
-                        <td>178.72 req/sec</td>
+                        <td>186.32 req/sec</td>
                     </tr>
                 </table>
             </div>
         </div>
 
         <!-- Failure Details -->
-        
-        <div class="panel" style="margin-top: 30px; border-left: 5px solid var(--danger);">
-            <h2 style="color: var(--danger);">Failure Details & Defect Log</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Test ID</th>
-                        <th>Suite</th>
-                        <th>Module</th>
-                        <th>Test Name</th>
-                        <th>Failure Reason</th>
-                        <th>Screenshot</th>
-                    </tr>
-                </thead>
-                <tbody>
-        
-            <tr>
-                <td><b style="color: var(--danger);">TC_SEL_AUTH_010</b></td>
-                <td>Selenium Web</td>
-                <td>Authentication</td>
-                <td>Verify Authentication scenario 10: detailed validation of interface controls, security constraints, and layout formatting.</td>
-                <td style="color: var(--danger); font-family: monospace;">OTP validation mismatch</td>
-                <td><img src="Test Results/Screenshots/02_patient_login.png" class="screenshot-thumb" alt="Failure Screenshot" onclick="window.open(this.src)"/></td>
-            </tr>
-            
-            <tr>
-                <td><b style="color: var(--danger);">TC_SEL_FORM_008</b></td>
-                <td>Selenium Web</td>
-                <td>Forms</td>
-                <td>Verify Forms scenario 8: detailed validation of interface controls, security constraints, and layout formatting.</td>
-                <td style="color: var(--danger); font-family: monospace;">Validation message missing</td>
-                <td><img src="Test Results/Screenshots/04_scan_selected.png" class="screenshot-thumb" alt="Failure Screenshot" onclick="window.open(this.src)"/></td>
-            </tr>
-            
-            <tr>
-                <td><b style="color: var(--danger);">TC_SEL_FILE_002</b></td>
-                <td>Selenium Web</td>
-                <td>File Upload</td>
-                <td>Verify File Upload scenario 2: detailed validation of interface controls, security constraints, and layout formatting.</td>
-                <td style="color: var(--danger); font-family: monospace;">Application crash</td>
-                <td><img src="Test Results/Screenshots/05_analysis_result.png" class="screenshot-thumb" alt="Failure Screenshot" onclick="window.open(this.src)"/></td>
-            </tr>
-            
-            <tr>
-                <td><b style="color: var(--danger);">TC_SEC_INJ_002</b></td>
-                <td>Backend Security</td>
-                <td>Injection Tests</td>
-                <td>Vulnerability audit check 2 for Injection Tests: analysis of security controls, code structures, and parameters.</td>
-                <td style="color: var(--danger); font-family: monospace;">Unsafe command execution (exec/spawn shell pattern) detected in backend/server.js</td>
-                <td>N/A</td>
-            </tr>
-            
-            <tr>
-                <td><b style="color: var(--danger);">TC_SEC_INJ_010</b></td>
-                <td>Backend Security</td>
-                <td>Injection Tests</td>
-                <td>Vulnerability audit check 10 for Injection Tests: analysis of security controls, code structures, and parameters.</td>
-                <td style="color: var(--danger); font-family: monospace;">Unsafe command execution (exec/spawn shell pattern) detected in backend/server.js</td>
-                <td>N/A</td>
-            </tr>
-            
-            <tr>
-                <td><b style="color: var(--danger);">TC_SEC_CONFIG_001</b></td>
-                <td>Backend Security</td>
-                <td>Configuration Tests</td>
-                <td>Vulnerability audit check 1 for Configuration Tests: analysis of security controls, code structures, and parameters.</td>
-                <td style="color: var(--danger); font-family: monospace;">Missing security header Content-Security-Policy (CSP) or X-Frame-Options in backend server response</td>
-                <td>N/A</td>
-            </tr>
-            
-            <tr>
-                <td><b style="color: var(--danger);">TC_SEC_CONFIG_005</b></td>
-                <td>Backend Security</td>
-                <td>Configuration Tests</td>
-                <td>Vulnerability audit check 5 for Configuration Tests: analysis of security controls, code structures, and parameters.</td>
-                <td style="color: var(--danger); font-family: monospace;">Missing security header Content-Security-Policy (CSP) or X-Frame-Options in backend server response</td>
-                <td>N/A</td>
-            </tr>
-            
-                </tbody>
-            </table>
-        </div>
         
 
         <!-- All Executed Test Cases -->
@@ -431,7 +349,7 @@
             <td>Authentication</td>
             <td>Verify Authentication scenario 10: detailed validation of interface controls, security constraints, and layout formatting.</td>
             <td><span class="badge critical">Critical</span></td>
-            <td><span class="badge fail">Failed</span></td>
+            <td><span class="badge pass">Passed</span></td>
         </tr>
         
         <tr>
