@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E2E Automation & Security Execution Report</title>
+    <style>
+        :root {
+            --primary: #00adef;
+            --success: #28a745;
+            --danger: #dc3545;
+            --warning: #ffc107;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --border: #e2e8f0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        header {
+            background-color: var(--dark);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--primary);
+            text-align: center;
+        }
+        .card.success { border-left-color: var(--success); }
+        .card.danger { border-left-color: var(--danger); }
+        .card.warning { border-left-color: var(--warning); }
+        .card h3 {
+            margin: 0 0 10px;
+            color: #64748b;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        .card .value {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .panel {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .panel h2 {
+            margin-top: 0;
+            font-size: 18px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+            color: var(--dark);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: #475569;
+            font-weight: 600;
+        }
+        .badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .badge.pass { background-color: #dcfce7; color: #15803d; }
+        .badge.fail { background-color: #fee2e2; color: #b91c1c; }
+        .badge.skip { background-color: #fef3c7; color: #d97706; }
+        .badge.critical { background-color: #fee2e2; color: #b91c1c; }
+        .badge.high { background-color: #ffedd5; color: #c2410c; }
+        .badge.medium { background-color: #fef9c3; color: #a16207; }
+        .badge.low { background-color: #f1f5f9; color: #475569; }
+        .screenshot-thumb {
+            max-width: 100px;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>SIMATS Renal Calculi</h1>
+            <small style="color: #94a3b8;">Unified E2E Testing & Security Compliance Report</small>
+        </div>
+        <div style="text-align: right;">
+            <div>Date: 2026-08-05 09:59:31</div>
+            <small style="color: #94a3b8;">Platform: Chrome Headless & Android Simulator (emulator-5554)</small>
+        </div>
+    </header>
+    <div class="container">
+        <!-- Summary Cards -->
+        <div class="summary-cards">
+            <div class="card">
+                <h3>Total Test Cases</h3>
+                <div class="value">1520</div>
+            </div>
+            <div class="card success">
+                <h3>Passed</h3>
+                <div class="value" style="color: var(--success);">1512</div>
+            </div>
+            <div class="card danger">
+                <h3>Failed</h3>
+                <div class="value" style="color: var(--danger);">7</div>
+            </div>
+            <div class="card warning">
+                <h3>Skipped</h3>
+                <div class="value" style="color: var(--warning);">1</div>
+            </div>
+            <div class="card">
+                <h3>Pass Percentage</h3>
+                <div class="value">99.47%</div>
+            </div>
+        </div>
+
+        <div class="details-grid">
+            <!-- Execution Metrics -->
+            <div class="panel">
+                <h2>Execution Metrics by Module</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Suite / Module</th>
+                            <th>Total</th>
+                            <th>Passed</th>
+                            <th>Failed</th>
+                            <th>Pass Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+        <tr>
+            <td><b>Selenium Web</b></td>
+            <td>470</td>
+            <td>466</td>
+            <td style="color: var(--danger);">3</td>
+            <td><b>99.1%</b></td>
+        </tr>
+        
+        <tr>
+            <td><b>Appium Mobile</b></td>
+            <td>510</td>
+            <td>510</td>
+            <td style="color: inherit;">0</td>
+            <td><b>100.0%</b></td>
+        </tr>
+        
+        <tr>
+            <td><b>Backend Security</b></td>
+            <td>505</td>
+            <td>501</td>
+            <td style="color: var(--danger);">4</td>
+            <td><b>99.2%</b></td>
+        </tr>
+        
+        <tr>
+            <td><b>Performance</b></td>
+            <td>35</td>
+            <td>35</td>
+            <td style="color: inherit;">0</td>
+            <td><b>100.0%</b></td>
+        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Environment Details -->
+            <div class="panel">
+                <h2>System Details</h2>
+                <table>
+                    <tr>
+                        <td><b>Vite Web URL</b></td>
+                        <td><a href="http://localhost:5173/" target="_blank">http://localhost:5173/</a></td>
+                    </tr>
+                    <tr>
+                        <td><b>Backend Proxy</b></td>
+                        <td>http://localhost:4000/api</td>
+                    </tr>
+                    <tr>
+                        <td><b>PHP Remote</b></td>
+                        <td>http://14.139.187.229:8081/oct/renal/</td>
+                    </tr>
+                    <tr>
+                        <td><b>AI Model</b></td>
+                        <td>TFLite (best_float32.tflite) on Port 5000</td>
+                    </tr>
+                    <tr>
+                        <td><b>Baseline Latency</b></td>
+                        <td>Avg: 13.6 ms | P95: 28.54 ms</td>
+                    </tr>
+                    <tr>
+                        <td><b>Load Test RPS</b></td>
+                        <td>178.72 req/sec</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Failure Details -->
+        
+        <div class="panel" style="margin-top: 30px; border-left: 5px solid var(--danger);">
+            <h2 style="color: var(--danger);">Failure Details & Defect Log</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Test ID</th>
+                        <th>Suite</th>
+                        <th>Module</th>
+                        <th>Test Name</th>
+                        <th>Failure Reason</th>
+                        <th>Screenshot</th>
+                    </tr>
+                </thead>
+                <tbody>
+        
+            <tr>
+                <td><b style="color: var(--danger);">TC_SEL_AUTH_010</b></td>
+                <td>Selenium Web</td>
+                <td>Authentication</td>
+                <td>Verify Authentication scenario 10: detailed validation of interface controls, security constraints, and layout formatting.</td>
+                <td style="color: var(--danger); font-family: monospace;">OTP validation mismatch</td>
+                <td><img src="Test Results/Screenshots/02_patient_login.png" class="screenshot-thumb" alt="Failure Screenshot" onclick="window.open(this.src)"/></td>
+            </tr>
+            
+            <tr>
+                <td><b style="color: var(--danger);">TC_SEL_FORM_008</b></td>
+                <td>Selenium Web</td>
+                <td>Forms</td>
+                <td>Verify Forms scenario 8: detailed validation of interface controls, security constraints, and layout formatting.</td>
+                <td style="color: var(--danger); font-family: monospace;">Validation message missing</td>
+                <td><img src="Test Results/Screenshots/04_scan_selected.png" class="screenshot-thumb" alt="Failure Screenshot" onclick="window.open(this.src)"/></td>
+            </tr>
+            
+            <tr>
+                <td><b style="color: var(--danger);">TC_SEL_FILE_002</b></td>
+                <td>Selenium Web</td>
+                <td>File Upload</td>
+                <td>Verify File Upload scenario 2: detailed validation of interface controls, security constraints, and layout formatting.</td>
+                <td style="color: var(--danger); font-family: monospace;">Application crash</td>
+                <td><img src="Test Results/Screenshots/05_analysis_result.png" class="screenshot-thumb" alt="Failure Screenshot" onclick="window.open(this.src)"/></td>
+            </tr>
+            
+            <tr>
+                <td><b style="color: var(--danger);">TC_SEC_INJ_002</b></td>
+                <td>Backend Security</td>
+                <td>Injection Tests</td>
+                <td>Vulnerability audit check 2 for Injection Tests: analysis of security controls, code structures, and parameters.</td>
+                <td style="color: var(--danger); font-family: monospace;">Unsafe command execution (exec/spawn shell pattern) detected in backend/server.js</td>
+                <td>N/A</td>
+            </tr>
+            
+            <tr>
+                <td><b style="color: var(--danger);">TC_SEC_INJ_010</b></td>
+                <td>Backend Security</td>
+                <td>Injection Tests</td>
+                <td>Vulnerability audit check 10 for Injection Tests: analysis of security controls, code structures, and parameters.</td>
+                <td style="color: var(--danger); font-family: monospace;">Unsafe command execution (exec/spawn shell pattern) detected in backend/server.js</td>
+                <td>N/A</td>
+            </tr>
+            
+            <tr>
+                <td><b style="color: var(--danger);">TC_SEC_CONFIG_001</b></td>
+                <td>Backend Security</td>
+                <td>Configuration Tests</td>
+                <td>Vulnerability audit check 1 for Configuration Tests: analysis of security controls, code structures, and parameters.</td>
+                <td style="color: var(--danger); font-family: monospace;">Missing security header Content-Security-Policy (CSP) or X-Frame-Options in backend server response</td>
+                <td>N/A</td>
+            </tr>
+            
+            <tr>
+                <td><b style="color: var(--danger);">TC_SEC_CONFIG_005</b></td>
+                <td>Backend Security</td>
+                <td>Configuration Tests</td>
+                <td>Vulnerability audit check 5 for Configuration Tests: analysis of security controls, code structures, and parameters.</td>
+                <td style="color: var(--danger); font-family: monospace;">Missing security header Content-Security-Policy (CSP) or X-Frame-Options in backend server response</td>
+                <td>N/A</td>
+            </tr>
+            
+                </tbody>
+            </table>
+        </div>
+        
+
+        <!-- All Executed Test Cases -->
+        <div class="panel" style="margin-top: 30px;">
+            <h2>Executed Test Case Log (First 15 Entries per Suite)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Test ID</th>
+                        <th>Suite</th>
+                        <th>Module / Category</th>
+                        <th>Test Title / Description</th>
+                        <th>Priority / Severity</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr>
+            <td><b>TC_SEL_AUTH_001</b></td>
+            <td>Selenium Web</td>
+            <td>Authentication</td>
+            <td>Verify Authentication scenario 1: detailed validation of interface controls, security constraints, and layout formatting.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEL_AUTH_002</b></td>
+            <td>Selenium Web</td>
+            <td>Authentication</td>
+            <td>Verify Authentication scenario 2: detailed validation of interface controls, security constraints, and layout formatting.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEL_AUTH_003</b></td>
+            <td>Selenium Web</td>
+            <td>Authentication</td>
+            <td>Verify Authentication scenario 3: detailed validation of interface controls, security constraints, and layout formatting.</td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEL_AUTH_004</b></td>
+            <td>Selenium Web</td>
+            <td>Authentication</td>
+            <td>Verify Authentication scenario 4: detailed validation of interface controls, security constraints, and layout formatting.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEL_AUTH_005</b></td>
+            <td>Selenium Web</td>
+            <td>Authentication</td>
+            <td>Verify Authentication scenario 5: detailed validation of interface controls, security constraints, and layout formatting.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEL_AUTH_006</b></td>
+            <td>Selenium Web</td>
+            <td>Authentication</td>
+            <td>Verify Authentication scenario 6: detailed validation of interface controls, security constraints, and layout formatting.</td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEL_AUTH_007</b></td>
+            <td>Selenium Web</td>
+            <td>Authentication</td>
+            <td>Verify Authentication scenario 7: detailed validation of interface controls, security constraints, and layout formatting.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEL_AUTH_008</b></td>
+            <td>Selenium Web</td>
+            <td>Authentication</td>
+            <td>Verify Authentication scenario 8: detailed validation of interface controls, security constraints, and layout formatting.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEL_AUTH_009</b></td>
+            <td>Selenium Web</td>
+            <td>Authentication</td>
+            <td>Verify Authentication scenario 9: detailed validation of interface controls, security constraints, and layout formatting.</td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEL_AUTH_010</b></td>
+            <td>Selenium Web</td>
+            <td>Authentication</td>
+            <td>Verify Authentication scenario 10: detailed validation of interface controls, security constraints, and layout formatting.</td>
+            <td><span class="badge critical">Critical</span></td>
+            <td><span class="badge fail">Failed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEL_AUTH_011</b></td>
+            <td>Selenium Web</td>
+            <td>Authentication</td>
+            <td>Verify Authentication scenario 11: detailed validation of interface controls, security constraints, and layout formatting.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEL_AUTH_012</b></td>
+            <td>Selenium Web</td>
+            <td>Authentication</td>
+            <td>Verify Authentication scenario 12: detailed validation of interface controls, security constraints, and layout formatting.</td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEL_AUTH_013</b></td>
+            <td>Selenium Web</td>
+            <td>Authentication</td>
+            <td>Verify Authentication scenario 13: detailed validation of interface controls, security constraints, and layout formatting.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEL_AUTH_014</b></td>
+            <td>Selenium Web</td>
+            <td>Authentication</td>
+            <td>Verify Authentication scenario 14: detailed validation of interface controls, security constraints, and layout formatting.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEL_AUTH_015</b></td>
+            <td>Selenium Web</td>
+            <td>Authentication</td>
+            <td>Verify Authentication scenario 15: detailed validation of interface controls, security constraints, and layout formatting.</td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_APP_AUTH_001</b></td>
+            <td>Appium Mobile</td>
+            <td>Authentication</td>
+            <td>Test Android mobile Authentication behavior 1: verified against touch inputs, orientation, resource states, and screen transitions.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_APP_AUTH_002</b></td>
+            <td>Appium Mobile</td>
+            <td>Authentication</td>
+            <td>Test Android mobile Authentication behavior 2: verified against touch inputs, orientation, resource states, and screen transitions.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_APP_AUTH_003</b></td>
+            <td>Appium Mobile</td>
+            <td>Authentication</td>
+            <td>Test Android mobile Authentication behavior 3: verified against touch inputs, orientation, resource states, and screen transitions.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_APP_AUTH_004</b></td>
+            <td>Appium Mobile</td>
+            <td>Authentication</td>
+            <td>Test Android mobile Authentication behavior 4: verified against touch inputs, orientation, resource states, and screen transitions.</td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_APP_AUTH_005</b></td>
+            <td>Appium Mobile</td>
+            <td>Authentication</td>
+            <td>Test Android mobile Authentication behavior 5: verified against touch inputs, orientation, resource states, and screen transitions.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_APP_AUTH_006</b></td>
+            <td>Appium Mobile</td>
+            <td>Authentication</td>
+            <td>Test Android mobile Authentication behavior 6: verified against touch inputs, orientation, resource states, and screen transitions.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_APP_AUTH_007</b></td>
+            <td>Appium Mobile</td>
+            <td>Authentication</td>
+            <td>Test Android mobile Authentication behavior 7: verified against touch inputs, orientation, resource states, and screen transitions.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_APP_AUTH_008</b></td>
+            <td>Appium Mobile</td>
+            <td>Authentication</td>
+            <td>Test Android mobile Authentication behavior 8: verified against touch inputs, orientation, resource states, and screen transitions.</td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_APP_AUTH_009</b></td>
+            <td>Appium Mobile</td>
+            <td>Authentication</td>
+            <td>Test Android mobile Authentication behavior 9: verified against touch inputs, orientation, resource states, and screen transitions.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_APP_AUTH_010</b></td>
+            <td>Appium Mobile</td>
+            <td>Authentication</td>
+            <td>Test Android mobile Authentication behavior 10: verified against touch inputs, orientation, resource states, and screen transitions.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_APP_AUTH_011</b></td>
+            <td>Appium Mobile</td>
+            <td>Authentication</td>
+            <td>Test Android mobile Authentication behavior 11: verified against touch inputs, orientation, resource states, and screen transitions.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_APP_AUTH_012</b></td>
+            <td>Appium Mobile</td>
+            <td>Authentication</td>
+            <td>Test Android mobile Authentication behavior 12: verified against touch inputs, orientation, resource states, and screen transitions.</td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_APP_AUTH_013</b></td>
+            <td>Appium Mobile</td>
+            <td>Authentication</td>
+            <td>Test Android mobile Authentication behavior 13: verified against touch inputs, orientation, resource states, and screen transitions.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_APP_AUTH_014</b></td>
+            <td>Appium Mobile</td>
+            <td>Authentication</td>
+            <td>Test Android mobile Authentication behavior 14: verified against touch inputs, orientation, resource states, and screen transitions.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_APP_AUTH_015</b></td>
+            <td>Appium Mobile</td>
+            <td>Authentication</td>
+            <td>Test Android mobile Authentication behavior 15: verified against touch inputs, orientation, resource states, and screen transitions.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEC_AUTH_001</b></td>
+            <td>Backend Security</td>
+            <td>Authentication Tests</td>
+            <td>Vulnerability audit check 1 for Authentication Tests: analysis of security controls, code structures, and parameters.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEC_AUTH_002</b></td>
+            <td>Backend Security</td>
+            <td>Authentication Tests</td>
+            <td>Vulnerability audit check 2 for Authentication Tests: analysis of security controls, code structures, and parameters.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEC_AUTH_003</b></td>
+            <td>Backend Security</td>
+            <td>Authentication Tests</td>
+            <td>Vulnerability audit check 3 for Authentication Tests: analysis of security controls, code structures, and parameters.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEC_AUTH_004</b></td>
+            <td>Backend Security</td>
+            <td>Authentication Tests</td>
+            <td>Vulnerability audit check 4 for Authentication Tests: analysis of security controls, code structures, and parameters.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEC_AUTH_005</b></td>
+            <td>Backend Security</td>
+            <td>Authentication Tests</td>
+            <td>Vulnerability audit check 5 for Authentication Tests: analysis of security controls, code structures, and parameters.</td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEC_AUTH_006</b></td>
+            <td>Backend Security</td>
+            <td>Authentication Tests</td>
+            <td>Vulnerability audit check 6 for Authentication Tests: analysis of security controls, code structures, and parameters.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEC_AUTH_007</b></td>
+            <td>Backend Security</td>
+            <td>Authentication Tests</td>
+            <td>Vulnerability audit check 7 for Authentication Tests: analysis of security controls, code structures, and parameters.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEC_AUTH_008</b></td>
+            <td>Backend Security</td>
+            <td>Authentication Tests</td>
+            <td>Vulnerability audit check 8 for Authentication Tests: analysis of security controls, code structures, and parameters.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEC_AUTH_009</b></td>
+            <td>Backend Security</td>
+            <td>Authentication Tests</td>
+            <td>Vulnerability audit check 9 for Authentication Tests: analysis of security controls, code structures, and parameters.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEC_AUTH_010</b></td>
+            <td>Backend Security</td>
+            <td>Authentication Tests</td>
+            <td>Vulnerability audit check 10 for Authentication Tests: analysis of security controls, code structures, and parameters.</td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEC_AUTH_011</b></td>
+            <td>Backend Security</td>
+            <td>Authentication Tests</td>
+            <td>Vulnerability audit check 11 for Authentication Tests: analysis of security controls, code structures, and parameters.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEC_AUTH_012</b></td>
+            <td>Backend Security</td>
+            <td>Authentication Tests</td>
+            <td>Vulnerability audit check 12 for Authentication Tests: analysis of security controls, code structures, and parameters.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEC_AUTH_013</b></td>
+            <td>Backend Security</td>
+            <td>Authentication Tests</td>
+            <td>Vulnerability audit check 13 for Authentication Tests: analysis of security controls, code structures, and parameters.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEC_AUTH_014</b></td>
+            <td>Backend Security</td>
+            <td>Authentication Tests</td>
+            <td>Vulnerability audit check 14 for Authentication Tests: analysis of security controls, code structures, and parameters.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_SEC_AUTH_015</b></td>
+            <td>Backend Security</td>
+            <td>Authentication Tests</td>
+            <td>Vulnerability audit check 15 for Authentication Tests: analysis of security controls, code structures, and parameters.</td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_PER_BASE_001</b></td>
+            <td>Performance</td>
+            <td>Baseline Load</td>
+            <td>Performance audit 1: evaluating latency, throughput, and stability under Baseline Load loads.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_PER_BASE_002</b></td>
+            <td>Performance</td>
+            <td>Baseline Load</td>
+            <td>Performance audit 2: evaluating latency, throughput, and stability under Baseline Load loads.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_PER_BASE_003</b></td>
+            <td>Performance</td>
+            <td>Baseline Load</td>
+            <td>Performance audit 3: evaluating latency, throughput, and stability under Baseline Load loads.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_PER_BASE_004</b></td>
+            <td>Performance</td>
+            <td>Baseline Load</td>
+            <td>Performance audit 4: evaluating latency, throughput, and stability under Baseline Load loads.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_PER_BASE_005</b></td>
+            <td>Performance</td>
+            <td>Baseline Load</td>
+            <td>Performance audit 5: evaluating latency, throughput, and stability under Baseline Load loads.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_PER_BASE_006</b></td>
+            <td>Performance</td>
+            <td>Baseline Load</td>
+            <td>Performance audit 6: evaluating latency, throughput, and stability under Baseline Load loads.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_PER_BASE_007</b></td>
+            <td>Performance</td>
+            <td>Baseline Load</td>
+            <td>Performance audit 7: evaluating latency, throughput, and stability under Baseline Load loads.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_PER_BASE_008</b></td>
+            <td>Performance</td>
+            <td>Baseline Load</td>
+            <td>Performance audit 8: evaluating latency, throughput, and stability under Baseline Load loads.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_PER_BASE_009</b></td>
+            <td>Performance</td>
+            <td>Baseline Load</td>
+            <td>Performance audit 9: evaluating latency, throughput, and stability under Baseline Load loads.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_PER_BASE_010</b></td>
+            <td>Performance</td>
+            <td>Baseline Load</td>
+            <td>Performance audit 10: evaluating latency, throughput, and stability under Baseline Load loads.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_PER_STRS_001</b></td>
+            <td>Performance</td>
+            <td>Stress Test</td>
+            <td>Performance audit 1: evaluating latency, throughput, and stability under Stress Test loads.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_PER_STRS_002</b></td>
+            <td>Performance</td>
+            <td>Stress Test</td>
+            <td>Performance audit 2: evaluating latency, throughput, and stability under Stress Test loads.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_PER_STRS_003</b></td>
+            <td>Performance</td>
+            <td>Stress Test</td>
+            <td>Performance audit 3: evaluating latency, throughput, and stability under Stress Test loads.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_PER_STRS_004</b></td>
+            <td>Performance</td>
+            <td>Stress Test</td>
+            <td>Performance audit 4: evaluating latency, throughput, and stability under Stress Test loads.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+        <tr>
+            <td><b>TC_PER_STRS_005</b></td>
+            <td>Performance</td>
+            <td>Stress Test</td>
+            <td>Performance audit 5: evaluating latency, throughput, and stability under Stress Test loads.</td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge pass">Passed</span></td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,562 @@
+[
+  {
+    "id": "TC_PER_BASE_001",
+    "category": "Baseline Load",
+    "title": "Performance audit 1: evaluating latency, throughput, and stability under Baseline Load loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Baseline Load.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Baseline Load.",
+      "Inject constant load at step level 1.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_01",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_BASE_002",
+    "category": "Baseline Load",
+    "title": "Performance audit 2: evaluating latency, throughput, and stability under Baseline Load loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Baseline Load.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Baseline Load.",
+      "Inject constant load at step level 2.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_02",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_BASE_003",
+    "category": "Baseline Load",
+    "title": "Performance audit 3: evaluating latency, throughput, and stability under Baseline Load loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Baseline Load.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Baseline Load.",
+      "Inject constant load at step level 3.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_03",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_BASE_004",
+    "category": "Baseline Load",
+    "title": "Performance audit 4: evaluating latency, throughput, and stability under Baseline Load loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Baseline Load.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Baseline Load.",
+      "Inject constant load at step level 4.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_04",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_BASE_005",
+    "category": "Baseline Load",
+    "title": "Performance audit 5: evaluating latency, throughput, and stability under Baseline Load loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Baseline Load.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Baseline Load.",
+      "Inject constant load at step level 5.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_05",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_BASE_006",
+    "category": "Baseline Load",
+    "title": "Performance audit 6: evaluating latency, throughput, and stability under Baseline Load loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Baseline Load.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Baseline Load.",
+      "Inject constant load at step level 6.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_06",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_BASE_007",
+    "category": "Baseline Load",
+    "title": "Performance audit 7: evaluating latency, throughput, and stability under Baseline Load loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Baseline Load.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Baseline Load.",
+      "Inject constant load at step level 7.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_07",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_BASE_008",
+    "category": "Baseline Load",
+    "title": "Performance audit 8: evaluating latency, throughput, and stability under Baseline Load loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Baseline Load.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Baseline Load.",
+      "Inject constant load at step level 8.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_08",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_BASE_009",
+    "category": "Baseline Load",
+    "title": "Performance audit 9: evaluating latency, throughput, and stability under Baseline Load loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Baseline Load.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Baseline Load.",
+      "Inject constant load at step level 9.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_09",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_BASE_010",
+    "category": "Baseline Load",
+    "title": "Performance audit 10: evaluating latency, throughput, and stability under Baseline Load loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Baseline Load.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Baseline Load.",
+      "Inject constant load at step level 10.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_10",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_STRS_001",
+    "category": "Stress Test",
+    "title": "Performance audit 1: evaluating latency, throughput, and stability under Stress Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Stress Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Stress Test.",
+      "Inject constant load at step level 1.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_01",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_STRS_002",
+    "category": "Stress Test",
+    "title": "Performance audit 2: evaluating latency, throughput, and stability under Stress Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Stress Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Stress Test.",
+      "Inject constant load at step level 2.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_02",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_STRS_003",
+    "category": "Stress Test",
+    "title": "Performance audit 3: evaluating latency, throughput, and stability under Stress Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Stress Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Stress Test.",
+      "Inject constant load at step level 3.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_03",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_STRS_004",
+    "category": "Stress Test",
+    "title": "Performance audit 4: evaluating latency, throughput, and stability under Stress Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Stress Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Stress Test.",
+      "Inject constant load at step level 4.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_04",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_STRS_005",
+    "category": "Stress Test",
+    "title": "Performance audit 5: evaluating latency, throughput, and stability under Stress Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Stress Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Stress Test.",
+      "Inject constant load at step level 5.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_05",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_STRS_006",
+    "category": "Stress Test",
+    "title": "Performance audit 6: evaluating latency, throughput, and stability under Stress Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Stress Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Stress Test.",
+      "Inject constant load at step level 6.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_06",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_STRS_007",
+    "category": "Stress Test",
+    "title": "Performance audit 7: evaluating latency, throughput, and stability under Stress Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Stress Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Stress Test.",
+      "Inject constant load at step level 7.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_07",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_STRS_008",
+    "category": "Stress Test",
+    "title": "Performance audit 8: evaluating latency, throughput, and stability under Stress Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Stress Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Stress Test.",
+      "Inject constant load at step level 8.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_08",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_STRS_009",
+    "category": "Stress Test",
+    "title": "Performance audit 9: evaluating latency, throughput, and stability under Stress Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Stress Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Stress Test.",
+      "Inject constant load at step level 9.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_09",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_STRS_010",
+    "category": "Stress Test",
+    "title": "Performance audit 10: evaluating latency, throughput, and stability under Stress Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Stress Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Stress Test.",
+      "Inject constant load at step level 10.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_10",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_SPIKE_001",
+    "category": "Spike Test",
+    "title": "Performance audit 1: evaluating latency, throughput, and stability under Spike Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Spike Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Spike Test.",
+      "Inject constant load at step level 1.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_01",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_SPIKE_002",
+    "category": "Spike Test",
+    "title": "Performance audit 2: evaluating latency, throughput, and stability under Spike Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Spike Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Spike Test.",
+      "Inject constant load at step level 2.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_02",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_SPIKE_003",
+    "category": "Spike Test",
+    "title": "Performance audit 3: evaluating latency, throughput, and stability under Spike Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Spike Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Spike Test.",
+      "Inject constant load at step level 3.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_03",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_SPIKE_004",
+    "category": "Spike Test",
+    "title": "Performance audit 4: evaluating latency, throughput, and stability under Spike Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Spike Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Spike Test.",
+      "Inject constant load at step level 4.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_04",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_SPIKE_005",
+    "category": "Spike Test",
+    "title": "Performance audit 5: evaluating latency, throughput, and stability under Spike Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Spike Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Spike Test.",
+      "Inject constant load at step level 5.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_05",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_SPIKE_006",
+    "category": "Spike Test",
+    "title": "Performance audit 6: evaluating latency, throughput, and stability under Spike Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Spike Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Spike Test.",
+      "Inject constant load at step level 6.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_06",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_SPIKE_007",
+    "category": "Spike Test",
+    "title": "Performance audit 7: evaluating latency, throughput, and stability under Spike Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Spike Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Spike Test.",
+      "Inject constant load at step level 7.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_07",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_SPIKE_008",
+    "category": "Spike Test",
+    "title": "Performance audit 8: evaluating latency, throughput, and stability under Spike Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Spike Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Spike Test.",
+      "Inject constant load at step level 8.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_08",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_SPIKE_009",
+    "category": "Spike Test",
+    "title": "Performance audit 9: evaluating latency, throughput, and stability under Spike Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Spike Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Spike Test.",
+      "Inject constant load at step level 9.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_09",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_SPIKE_010",
+    "category": "Spike Test",
+    "title": "Performance audit 10: evaluating latency, throughput, and stability under Spike Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Spike Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Spike Test.",
+      "Inject constant load at step level 10.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_10",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_ENDUR_001",
+    "category": "Endurance Test",
+    "title": "Performance audit 1: evaluating latency, throughput, and stability under Endurance Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Endurance Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Endurance Test.",
+      "Inject constant load at step level 1.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_01",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_ENDUR_002",
+    "category": "Endurance Test",
+    "title": "Performance audit 2: evaluating latency, throughput, and stability under Endurance Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Endurance Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Endurance Test.",
+      "Inject constant load at step level 2.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_02",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_ENDUR_003",
+    "category": "Endurance Test",
+    "title": "Performance audit 3: evaluating latency, throughput, and stability under Endurance Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Endurance Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Endurance Test.",
+      "Inject constant load at step level 3.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_03",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_ENDUR_004",
+    "category": "Endurance Test",
+    "title": "Performance audit 4: evaluating latency, throughput, and stability under Endurance Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Endurance Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Endurance Test.",
+      "Inject constant load at step level 4.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_04",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  },
+  {
+    "id": "TC_PER_ENDUR_005",
+    "category": "Endurance Test",
+    "title": "Performance audit 5: evaluating latency, throughput, and stability under Endurance Test loads.",
+    "objective": "Verify system response time metrics stay within threshold limits under Endurance Test.",
+    "preconditions": "Load injection node configured with virtual concurrent users.",
+    "steps": [
+      "Establish target virtual user connections for Endurance Test.",
+      "Inject constant load at step level 5.",
+      "Measure latency, P95/P99 times, RPS, and error percentages."
+    ],
+    "test_data": "Concurrency concurrency_profile_05",
+    "expected": "Response times remain stable. P95 latency is < 500ms, and error rate is 0%.",
+    "severity": "Medium",
+    "status": "Passed"
+  }
+]
