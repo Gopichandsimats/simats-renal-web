@@ -63,7 +63,6 @@ jobs:
         run: |
           cd backend
           python predict.py &
-        async: true
 
       # Stage 8: Start Node.js Proxy Backend
       - name: Start Node.js Proxy Backend
@@ -73,13 +72,11 @@ jobs:
           MODEL_API_URL: http://localhost:5000/predict
         run: |
           npm run start:backend &
-        async: true
 
       # Stage 9: Start Local Dev Server for Selenium E2E runs
       - name: Start Frontend Server
         run: |
           npm run dev:frontend &
-        async: true
 
       # Stage 10: Wait for Servers Startup
       - name: Wait for Server Readiness
