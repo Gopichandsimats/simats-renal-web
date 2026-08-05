@@ -92,38 +92,6 @@ jobs:
         run: |
           python automation/run_all_tests.py
 
-      # Stage 12: Organize Reports for Pages Deployment
-      - name: Structure Reports for GitHub Pages
-        run: |
-          # Create folder structures in the client build directory
-          mkdir -p frontend/dist/reports/latest
-          mkdir -p frontend/dist/reports/history/build-${{ github.run_number }}
-          
-          # Copy execution-report.html and assets to latest report folder
-          cp -r "Test Results/HTML/"* frontend/dist/reports/latest/
-          cp -r "Test Results/Screenshots/" frontend/dist/reports/latest/
-          cp -r "Test Results/Logs/" frontend/dist/reports/latest/
-          cp "Test Results/Summary/summary.md" frontend/dist/reports/latest/
-          
-          # Copy to build-specific history archive folder
-          cp -r "Test Results/HTML/"* frontend/dist/reports/history/build-${{ github.run_number }}/
-          cp -r "Test Results/Screenshots/" frontend/dist/reports/history/build-${{ github.run_number }}/
-
-      # Stage 13: Setup GitHub Pages Configurations
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v4
-
-      # Stage 14: Upload GitHub Pages Artifact
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'frontend/dist'
-
-      # Stage 15: Deploy Web Portal + Reports to GitHub Pages
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
       # Stage 16: Upload Excel and Log Artifacts
       - name: Upload Test Run Evidence
         uses: actions/upload-artifact@v4
