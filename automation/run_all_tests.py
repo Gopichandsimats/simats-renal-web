@@ -30,7 +30,7 @@ def execute_all():
     
     # Paths and configurations
     base_url = os.environ.get("BASE_URL", "http://localhost:5173/")
-    img_path = "C:\\Users\\narra\\.gemini\\antigravity-ide\\brain\\6b2d2ef0-4281-46ea-84f8-9011ca32e66e\\sample_scan_1785901547800.png"
+    img_path = os.path.abspath("automation/screenshots/01_home_screen.png")
     screenshot_dir = "Test Results/Screenshots/"
     log_dir = "Test Results/Logs/"
     os.makedirs(screenshot_dir, exist_ok=True)

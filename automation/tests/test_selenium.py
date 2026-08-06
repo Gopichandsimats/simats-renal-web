@@ -121,7 +121,7 @@ def run_e2e_test(base_url, image_path, screenshot_dir):
 
 if __name__ == "__main__":
     url = os.environ.get("BASE_URL", "http://localhost:5173/")
-    img = "C:\\Users\\narra\\.gemini\\antigravity-ide\\brain\\6b2d2ef0-4281-46ea-84f8-9011ca32e66e\\sample_scan_1785901547800.png"
+    img = os.path.abspath("automation/screenshots/01_home_screen.png")
     scr = "automation/screenshots/"
     res = run_e2e_test(url, img, scr)
     if res["success"]:

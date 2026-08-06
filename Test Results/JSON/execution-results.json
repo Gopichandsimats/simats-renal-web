@@ -6,17 +6,17 @@
     "failed": 0,
     "skipped": 0,
     "pass_rate": 100.0,
-    "duration_sec": 79.34,
-    "date": "2026-08-05 10:05:10",
+    "duration_sec": 182.12,
+    "date": "2026-08-06 08:59:11",
     "base_url": "http://localhost:5173/"
   },
   "metrics": {
-    "rps": 186.32,
-    "avg_latency_ms": 11.93,
+    "rps": 195.55,
+    "avg_latency_ms": 9.48,
     "min_ms": 0.0,
-    "max_ms": 36.68,
-    "p95_latency_ms": 22.27,
-    "p99_latency_ms": 31.25,
+    "max_ms": 31.44,
+    "p95_latency_ms": 17.15,
+    "p99_latency_ms": 25.11,
     "device_info": "Chrome Headless & Android Simulator (emulator-5554)"
   },
   "suites": {
@@ -24832,7 +24832,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_BASE_002",
@@ -24850,7 +24850,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_BASE_003",
@@ -24868,7 +24868,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_BASE_004",
@@ -24886,7 +24886,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_BASE_005",
@@ -24904,7 +24904,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_BASE_006",
@@ -24922,7 +24922,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_BASE_007",
@@ -24940,7 +24940,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_BASE_008",
@@ -24958,7 +24958,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_BASE_009",
@@ -24976,7 +24976,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_BASE_010",
@@ -24994,7 +24994,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_STRS_001",
@@ -25012,7 +25012,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_STRS_002",
@@ -25030,7 +25030,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_STRS_003",
@@ -25048,7 +25048,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_STRS_004",
@@ -25066,7 +25066,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_STRS_005",
@@ -25084,7 +25084,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_STRS_006",
@@ -25102,7 +25102,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_STRS_007",
@@ -25120,7 +25120,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_STRS_008",
@@ -25138,7 +25138,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_STRS_009",
@@ -25156,7 +25156,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_STRS_010",
@@ -25174,7 +25174,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_SPIKE_001",
@@ -25192,7 +25192,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_SPIKE_002",
@@ -25210,7 +25210,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_SPIKE_003",
@@ -25228,7 +25228,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_SPIKE_004",
@@ -25246,7 +25246,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_SPIKE_005",
@@ -25264,7 +25264,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_SPIKE_006",
@@ -25282,7 +25282,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_SPIKE_007",
@@ -25300,7 +25300,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_SPIKE_008",
@@ -25318,7 +25318,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_SPIKE_009",
@@ -25336,7 +25336,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_SPIKE_010",
@@ -25354,7 +25354,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_ENDUR_001",
@@ -25372,7 +25372,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_ENDUR_002",
@@ -25390,7 +25390,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_ENDUR_003",
@@ -25408,7 +25408,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_ENDUR_004",
@@ -25426,7 +25426,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     },
     {
       "id": "TC_PER_ENDUR_005",
@@ -25444,7 +25444,7 @@
       "severity": "Medium",
       "status": "Passed",
       "suite": "Performance",
-      "time_ms": 11
+      "time_ms": 9
     }
   ]
 }
